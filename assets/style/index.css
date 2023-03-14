@@ -1,0 +1,44 @@
+@import url(./reset.css);
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+body {
+  background-color: #171a21;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+#smallBox {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.smallBox1,
+.smallBox2 {
+  width: 240px;
+  height: 45px;
+  background-color: #272a31;
+  border-radius: 5px;
+}
+
+.smallBox3 {
+  width: 100px;
+  height: 45px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
+
+#bigBox {
+  margin-top: 30px;
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  background-color: #272a31;
+  border-radius: 5px;
+}
