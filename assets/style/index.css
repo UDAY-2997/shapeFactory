@@ -6,39 +6,77 @@
 }
 
 body {
-  background-color: #171a21;
+  background-color: #171a22;
   display: grid;
-  align-items: center;
+  place-items: center;
   text-align: center;
 }
 
-#smallBox {
-  width: 600px;
+.menu {
   display: flex;
+  margin: 20px auto;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
+  width: 600px;
 }
 
-.smallBox1,
-.smallBox2 {
-  width: 240px;
-  height: 45px;
+.select-shape,
+.select-color {
   background-color: #272a31;
+  padding: 8px 14px;
   border-radius: 5px;
 }
 
-.smallBox3 {
-  width: 100px;
-  height: 45px;
+#create,
+.select-shape,
+.select-color {
+  padding: 8px 14px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  border-radius: 5px;
+}
+#create {
   background-color: #ff7b00;
-  border-radius: 5px;
+  color: #fff;
 }
 
-#bigBox {
-  margin-top: 30px;
+#shapes-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   width: 600px;
   height: 500px;
-  text-align: center;
+  margin: 0 auto;
   background-color: #272a31;
+  justify-items: center;
+  align-items: center;
+}
+
+.shape {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.shape.square {
   border-radius: 5px;
+}
+
+.shape.blue {
+  background-color: #0f9;
+}
+.shape.green {
+  background-color: #9f0;
+}
+.shape.orange {
+  background-color: #f90;
+}
+
+.shape.pink {
+  background-color: #f09;
+}
+.shape.purple {
+  background-color: #90f;
 }

@@ -16,19 +16,33 @@
 </head>
 
 <body>
-  <main>
-    <div class="container">
-      <section id="smallBox">
-        <input type="button" class="smallBox1">
-        <input type="button" class="smallBox2">
-        <input type="button" class="smallBox3">
-      </section>
-      <section id="bigBox">
-        <div class="bigBox1"></div>
-      </section>
-    </div>
+  <div class="container">
+    <h1>Shape factory</h1>
+    <div class="menu">
 
-  </main>
+      <div class="select-shape">
+        <label for="shapes">Select a shape</label>
+        <select id="shapes">
+          <option value="circle">Circle</option>
+          <option value="square">Square</option>
+        </select>
+      </div>
+      <div class="select-color">
+        <label for="colors">Select a color:</label>
+        <select id="colors">
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="orange">Orange</option>
+          <option value="pink">Pink</option>
+          <option value="puple">Purple</option>
+        </select>
+      </div>
+      <button id="create">Create</button>
+    </div>
+    <div id="shapes-container"></div>
+    <p class="message"></p>
+  </div>
+
 </body>
 
 </html>
