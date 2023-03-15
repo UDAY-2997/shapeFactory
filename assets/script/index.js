@@ -94,7 +94,8 @@ class Shape {
   }
 
   getInfo() {
-    return `This is a ${this.name} with ${this.color} color.`;
+    return `This is a 
+${this.name} with ${this.color} color.`;
   }
 }
 

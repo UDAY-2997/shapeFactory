@@ -41,6 +41,7 @@ body {
   background-color: #272a31;
   justify-items: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .shape {
@@ -56,9 +57,11 @@ body {
 .shape.blue {
   background-color: #0f9;
 }
+
 .shape.green {
   background-color: #9f0;
 }
+
 .shape.orange {
   background-color: #f90;
 }
@@ -66,6 +69,7 @@ body {
 .shape.pink {
   background-color: #ff009a;
 }
+
 .shape.purple {
   background-color: #90f;
 }
