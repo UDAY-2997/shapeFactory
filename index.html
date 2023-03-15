@@ -20,23 +20,24 @@
     <h1>Shape factory</h1>
     <div class="menu">
 
-      <div class="select-shape">
-        <label for="shapes">Select a shape</label>
+      <div id="select-shape">
+        <div id="display-shape">Select a shape</div>
         <select id="shapes">
           <option value="circle">Circle</option>
           <option value="square">Square</option>
         </select>
       </div>
-      <div class="select-color">
-        <label for="colors">Select a color:</label>
+      <div id="select-color">
+        <div id="display-color">Select a color</div>
         <select id="colors">
           <option value="blue">Blue</option>
           <option value="green">Green</option>
           <option value="orange">Orange</option>
           <option value="pink">Pink</option>
-          <option value="puple">Purple</option>
+          <option value="purple">Purple</option>
         </select>
       </div>
+
       <button id="create">Create</button>
     </div>
     <div id="shapes-container"></div>

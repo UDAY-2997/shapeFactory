@@ -2,10 +2,43 @@
 // Array to store all the created shapes
 let shapesArr = [];
 
+// Hide dropdown
+const shapeSelect = document.getElementById("shapes");
+const colorSelect = document.getElementById("colors");
+const shapeDisplay = document.querySelector("#display");
+const selectShape = document.querySelector("#select");
+
+selectShape.addEventListener("click", function () {
+  shapeSelect.classList.toggle("show");
+});
+
+shapeSelect.addEventListener("change", function () {
+  shapeDisplay.innerText = this.value;
+  shapeSelect.classList.remove("show");
+});
+
+document.addEventListener("click", function (event) {
+  if (!selectShape.contains(event.target)) {
+    shapeSelect.classList.remove("show");
+  }
+});
+
+selectShape.addEventListener("click", function () {
+  colorSelect.classList.toggle("show");
+});
+
+colorSelect.addEventListener("change", function () {
+  shapeDisplay.innerText = this.value;
+  colorSelect.classList.remove("show");
+});
+
+document.addEventListener("click", function (event) {
+  if (!colorSelect.contains(event.target)) {
+    colorSelect.classList.remove("show");
+  }
+});
 // Function to create a new shape object and add it to the array
 function createShape() {
-  const shapeSelect = document.getElementById("shapes");
-  const colorSelect = document.getElementById("colors");
   const shapeName = shapeSelect.value;
   const shapeColor = colorSelect.value;
 
