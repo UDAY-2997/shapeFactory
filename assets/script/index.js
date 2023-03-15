@@ -3,10 +3,12 @@
 let shapesArr = [];
 
 // Hide dropdown
-const shapeSelect = document.getElementById("shapes");
-const colorSelect = document.getElementById("colors");
-const shapeDisplay = document.querySelector("#display");
-const selectShape = document.querySelector("#select");
+const shapeSelect = document.querySelector("#shapes");
+const shapeDisplay = document.querySelector("#display-shape");
+const selectShape = document.querySelector("#select-shape");
+const colorSelect = document.querySelector("#colors");
+const colorDisplay = document.querySelector("#display-color");
+const selectColor = document.querySelector("#select-color");
 
 selectShape.addEventListener("click", function () {
   shapeSelect.classList.toggle("show");
@@ -23,17 +25,17 @@ document.addEventListener("click", function (event) {
   }
 });
 
-selectShape.addEventListener("click", function () {
+selectColor.addEventListener("click", function () {
   colorSelect.classList.toggle("show");
 });
 
 colorSelect.addEventListener("change", function () {
-  shapeDisplay.innerText = this.value;
+  colorDisplay.innerText = this.value;
   colorSelect.classList.remove("show");
 });
 
 document.addEventListener("click", function (event) {
-  if (!colorSelect.contains(event.target)) {
+  if (!selectColor.contains(event.target)) {
     colorSelect.classList.remove("show");
   }
 });
@@ -61,7 +63,7 @@ function createShape() {
 
 // Function to add a shape div to the grid
 function addShapeToGrid(shape) {
-  const shapesContainer = document.getElementById("shapes-container");
+  const shapesContainer = document.querySelector("#shapes-container");
   const shapeDiv = document.createElement("div");
   shapeDiv.className = "shape " + shape.name;
   shapeDiv.style.backgroundColor = shape.color;
@@ -119,5 +121,5 @@ class Square extends Shape {
 }
 
 // Add event listener to the create button
-const createButton = document.getElementById("create");
+const createButton = document.querySelector("#create");
 createButton.addEventListener("click", createShape);

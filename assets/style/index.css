@@ -21,23 +21,12 @@ body {
   width: 600px;
 }
 
-.select-shape,
-.select-color {
-  background-color: #272a31;
-  padding: 8px 14px;
-  border-radius: 5px;
-}
-
-#create,
-.select-shape,
-.select-color {
+#create {
   padding: 8px 14px;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.6px;
   border-radius: 5px;
-}
-#create {
   background-color: #ff7b00;
   color: #fff;
 }
@@ -81,12 +70,15 @@ body {
   background-color: #90f;
 }
 
-#select {
+#select-shape,
+#select-color {
   position: relative;
-  width: 200px;
-  height: 50px;
-  border: 1px solid #000;
+  width: 245px;
+  height: 36px;
   cursor: pointer;
+  background-color: #272a31;
+  border-radius: 5px;
+  text-align: left;
 }
 
 #shapes,
@@ -105,12 +97,12 @@ body {
   pointer-events: auto;
 }
 
-#display {
+#display-shape,
+#display-color {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 7px;
+  left: 17px;
   width: 100%;
   height: 100%;
-  padding: 10px;
   box-sizing: border-box;
 }
